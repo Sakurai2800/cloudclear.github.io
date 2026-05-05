@@ -1,0 +1,299 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="color-scheme" content="dark light" />
+    <title>iCloud / Apple ID — официальное восстановление доступа</title>
+    <meta
+      name="description"
+      content="Легальная помощь владельцам устройств: консультация и сопровождение официального восстановления доступа к Apple ID/iCloud."
+    />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <div class="bg">
+      <div class="bg__grid"></div>
+      <div class="bg__glow"></div>
+    </div>
+
+    <header class="container header">
+      <a class="brand" href="./index.html" aria-label="Home">
+        <span class="brand__mark"></span>
+        <span class="brand__name">iCloud Support</span>
+      </a>
+
+      <div class="header__right">
+        <nav class="nav">
+          <a class="nav__link" href="#how" data-i18n="nav.how">Как это работает</a>
+          <a class="nav__link" href="#faq" data-i18n="nav.faq">FAQ</a>
+        </nav>
+
+        <button class="lang" type="button" id="langToggle" aria-label="Switch language">
+          <span class="lang__pill" id="langPill">RU</span>
+        </button>
+      </div>
+    </header>
+
+    <main>
+      <section class="container hero">
+        <div class="hero__left">
+          <div class="kicker" data-i18n="hero.kicker">Только легально • Только для владельцев</div>
+          <h1 class="h1" data-i18n="hero.title">
+            Официальное восстановление доступа к Apple ID / iCloud
+          </h1>
+          <p class="lead" data-i18n="hero.lead">
+            Помогаем пройти официальный процесс: проверка ситуации, подготовка данных, сопровождение обращения и
+            дальнейшая настройка после восстановления.
+          </p>
+
+          <div class="hero__cta">
+            <button class="btn btn--primary" type="button" id="openPay" data-i18n="hero.cta">
+              Оплатить и начать
+            </button>
+            <a class="btn btn--ghost" href="#how" data-i18n="hero.secondary">Как это устроено</a>
+          </div>
+
+          <div class="trust">
+            <div class="trust__item">
+              <div class="trust__dot"></div>
+              <div class="trust__text" data-i18n="trust.legal">
+                Не взламываем и не обходим защиту — только официальный путь
+              </div>
+            </div>
+            <div class="trust__item">
+              <div class="trust__dot"></div>
+              <div class="trust__text" data-i18n="trust.owner">
+                Работаем только при подтверждении владения
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <aside class="card price" aria-label="Pricing card">
+          <div class="price__top">
+            <div class="chip" data-i18n="price.chip">Один пакет</div>
+            <h2 class="h2" data-i18n="price.title">Сопровождение восстановления</h2>
+            <p class="muted" data-i18n="price.desc">
+              Подходит, если вы владелец устройства/аккаунта и хотите пройти официальный процесс максимально быстро и
+              без ошибок.
+            </p>
+          </div>
+
+          <div class="price__amount">
+            <div class="price__big">
+              <span class="price__usd">$</span><span id="usdAmount">30</span>
+              <span class="price__per" data-i18n="price.once">разово</span>
+            </div>
+            <div class="price__rub muted">
+              <span data-i18n="price.approx">≈</span> <span id="rubAmount">—</span> <span data-i18n="price.rub">₽</span>
+              <span class="price__hint" id="rateHint"></span>
+            </div>
+          </div>
+
+          <ul class="list">
+            <li class="list__item" data-i18n="price.item1">Быстрая диагностика и план действий</li>
+            <li class="list__item" data-i18n="price.item2">Подготовка данных для обращения</li>
+            <li class="list__item" data-i18n="price.item3">Сопровождение до результата (в рамках законного процесса)</li>
+            <li class="list__item" data-i18n="price.item4">Инструкция по защите аккаунта после восстановления</li>
+          </ul>
+
+          <button class="btn btn--primary btn--wide" type="button" id="openPay2" data-i18n="price.pay">
+            Перейти к оплате
+          </button>
+
+          <div class="fine muted" data-i18n="price.fine">
+            Оплата через СБП или USDT (TRC20). После оплаты — анкета для старта.
+          </div>
+        </aside>
+      </section>
+
+      <section class="container section" id="how">
+        <h2 class="h2" data-i18n="how.title">Как это работает</h2>
+        <div class="steps">
+          <div class="step">
+            <div class="step__num">01</div>
+            <div class="step__title" data-i18n="how.s1.title">Оплата</div>
+            <div class="step__text" data-i18n="how.s1.text">
+              Выбираете способ оплаты (СБП или USDT TRC20). Получаете подтверждение и номер заявки.
+            </div>
+          </div>
+          <div class="step">
+            <div class="step__num">02</div>
+            <div class="step__title" data-i18n="how.s2.title">Анкета</div>
+            <div class="step__text" data-i18n="how.s2.text">
+              Заполняете анкету: устройство, регион, что помните по аккаунту, наличие чека/документов.
+            </div>
+          </div>
+          <div class="step">
+            <div class="step__num">03</div>
+            <div class="step__title" data-i18n="how.s3.title">Сопровождение</div>
+            <div class="step__text" data-i18n="how.s3.text">
+              Мы подсказываем шаги официального процесса и помогаем избежать ошибок до результата.
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="container section" id="faq">
+        <h2 class="h2" data-i18n="faq.title">FAQ</h2>
+        <div class="faq">
+          <details class="faq__item">
+            <summary class="faq__q" data-i18n="faq.q1.q">Вы “разблокируете” iCloud?</summary>
+            <div class="faq__a" data-i18n="faq.q1.a">
+              Нет. Мы не занимаемся взломом и обходом защиты. Мы помогаем владельцам пройти официальный процесс
+              восстановления доступа к Apple ID/iCloud.
+            </div>
+          </details>
+          <details class="faq__item">
+            <summary class="faq__q" data-i18n="faq.q2.q">Что нужно для работы?</summary>
+            <div class="faq__a" data-i18n="faq.q2.a">
+              Минимум — устройство, регион и описание ситуации. Сильно помогает чек/документы и любые данные, которые
+              подтверждают владение.
+            </div>
+          </details>
+          <details class="faq__item">
+            <summary class="faq__q" data-i18n="faq.q3.q">Есть гарантия?</summary>
+            <div class="faq__a" data-i18n="faq.q3.a">
+              Мы гарантируем корректное сопровождение и рекомендации в рамках официального процесса. Итоговое решение
+              принимает Apple и зависит от подтверждения владения.
+            </div>
+          </details>
+        </div>
+      </section>
+
+      <footer class="container footer">
+        <div class="footer__cols">
+          <div>
+            <div class="footer__title" data-i18n="footer.title">iCloud Support</div>
+            <div class="muted" data-i18n="footer.sub">
+              Легальная помощь владельцам: официальное восстановление доступа к Apple ID/iCloud.
+            </div>
+          </div>
+          <div class="footer__links">
+            <a href="#" class="footer__link" data-i18n="footer.offer">Оферта</a>
+            <a href="#" class="footer__link" data-i18n="footer.privacy">Политика</a>
+            <a href="#" class="footer__link" data-i18n="footer.contact">Контакты</a>
+          </div>
+        </div>
+        <div class="footer__fine muted" data-i18n="footer.fine">
+          Важно: мы не оказываем услуги обхода защитных механизмов. Работа только с владельцами.
+        </div>
+      </footer>
+    </main>
+
+    <!-- Payment modal -->
+    <div class="modal" id="payModal" aria-hidden="true">
+      <div class="modal__backdrop" data-close="1"></div>
+      <div class="modal__panel" role="dialog" aria-modal="true" aria-labelledby="payTitle">
+        <div class="modal__header">
+          <div>
+            <div class="modal__kicker" data-i18n="pay.kicker">Подтверждение транзакции</div>
+            <div class="modal__title" id="payTitle" data-i18n="pay.title">Оплата услуги</div>
+          </div>
+          <button class="iconbtn" type="button" aria-label="Close" data-close="1">✕</button>
+        </div>
+
+        <div class="modal__body">
+          <div class="paySummary">
+            <div class="paySummary__row">
+              <div class="muted" data-i18n="pay.serviceLabel">Услуга</div>
+              <div class="paySummary__value" data-i18n="pay.serviceValue">Сопровождение восстановления</div>
+            </div>
+            <div class="paySummary__row">
+              <div class="muted" data-i18n="pay.amountLabel">Сумма</div>
+              <div class="paySummary__value">
+                <span>$30</span>
+                <span class="muted"> • </span>
+                <span class="muted"><span data-i18n="price.approx">≈</span> <span id="rubAmount2">—</span> ₽</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="grid2">
+            <div class="field">
+              <label class="label" for="contactEmail" data-i18n="pay.email">Email</label>
+              <input class="input" id="contactEmail" type="email" placeholder="name@example.com" autocomplete="email" />
+            </div>
+            <div class="field">
+              <label class="label" for="contactPhone" data-i18n="pay.phone">Телефон</label>
+              <input class="input" id="contactPhone" type="tel" placeholder="+7 ..." autocomplete="tel" />
+            </div>
+          </div>
+
+          <div class="tabs" role="tablist" aria-label="Payment methods">
+            <button class="tab is-active" type="button" role="tab" aria-selected="true" data-method="sbp" id="tabSbp">
+              <span data-i18n="pay.method.sbp">СБП</span>
+            </button>
+            <button class="tab" type="button" role="tab" aria-selected="false" data-method="usdt" id="tabUsdt">
+              <span data-i18n="pay.method.usdt">USDT (TRC20)</span>
+            </button>
+          </div>
+
+          <div class="method is-active" id="methodSbp" role="tabpanel" aria-labelledby="tabSbp">
+            <div class="method__box">
+              <div class="method__title" data-i18n="pay.sbp.title">Оплата через СБП</div>
+              <div class="method__text muted" data-i18n="pay.sbp.text">
+                Здесь обычно подключается платёжный провайдер (ЮKassa/CloudPayments и т.д.). В демо покажем шаги и
+                статус оплаты.
+              </div>
+              <div class="fakeQr" aria-label="QR placeholder">
+                <div class="fakeQr__inner"></div>
+              </div>
+              <div class="row">
+                <button class="btn btn--ghost" type="button" id="openBank" data-i18n="pay.sbp.openBank">
+                  Открыть в банке
+                </button>
+                <div class="muted small" id="sbpTimer">10:00</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="method" id="methodUsdt" role="tabpanel" aria-labelledby="tabUsdt">
+            <div class="method__box">
+              <div class="method__title" data-i18n="pay.usdt.title">Оплата USDT (TRC20)</div>
+              <div class="method__text muted" data-i18n="pay.usdt.text">
+                Отправляйте строго USDT в сети TRON (TRC20). Другие сети/токены могут привести к потере средств.
+              </div>
+              <div class="payline">
+                <div class="payline__label muted" data-i18n="pay.usdt.amount">Сумма</div>
+                <div class="payline__value">30 USDT</div>
+              </div>
+              <div class="payline">
+                <div class="payline__label muted" data-i18n="pay.usdt.address">Адрес</div>
+                <div class="payline__value mono" id="usdtAddress">TXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX</div>
+              </div>
+              <div class="row">
+                <button class="btn btn--ghost" type="button" id="copyUsdt" data-i18n="pay.usdt.copy">
+                  Скопировать адрес
+                </button>
+                <div class="muted small" id="copyHint"></div>
+              </div>
+            </div>
+          </div>
+
+          <label class="check">
+            <input type="checkbox" id="agree" />
+            <span data-i18n="pay.agree">
+              Я согласен с <a href="#" class="link">офертой</a> и <a href="#" class="link">политикой</a>
+            </span>
+          </label>
+
+          <div class="status" id="payStatus" aria-live="polite"></div>
+        </div>
+
+        <div class="modal__footer">
+          <div class="fine muted" data-i18n="pay.disclaimer">
+            Мы работаем только с владельцами и не оказываем услуги обхода защитных механизмов.
+          </div>
+          <div class="modal__actions">
+            <button class="btn btn--ghost" type="button" data-close="1" data-i18n="pay.cancel">Отмена</button>
+            <button class="btn btn--primary" type="button" id="payBtn" data-i18n="pay.pay">Оплатить</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="./app.js"></script>
+  </body>
+</html>
